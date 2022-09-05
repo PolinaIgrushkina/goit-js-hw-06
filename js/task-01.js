@@ -1,4 +1,4 @@
-const ulEl = document.querySelector('ul');
+const ulEl = document.querySelector('#categories');
 
 const arrayOfMainLi = ulEl.querySelectorAll('.item');
 
