@@ -1,6 +1,6 @@
 const ulEl = document.querySelector('#categories');
 
-const arrayOfMainLi = ulEl.querySelectorAll('.item');
+const arrayOfMainLi = ulEl.children; //querySelectorAll('.item');
 
 console.log(`Number of categories: ${arrayOfMainLi.length}`);
 
