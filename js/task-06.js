@@ -2,14 +2,18 @@ const input = document.querySelector('#validation-input');
 
 input.addEventListener('blur', validation);
 
-function validation() {
+const valueLength = Number(input.getAttribute('data-length'));
 
-  if (input.value.length === input.getAttribute('data-length')) {
-    input.classList.add('valid');
+function validation(event) {
+
+  if (event.currentTarget.value.length === valueLength) {
     input.classList.remove('invalid');
+    input.classList.add('valid');
+    
   } else {
-    input.classList.add('invalid');
     input.classList.remove('valid');
+    input.classList.add('invalid');
+    
   }
 
 };
