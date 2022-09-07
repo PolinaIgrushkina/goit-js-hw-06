@@ -11,8 +11,8 @@ function formSubmission(event) {
   if (email.value === "" || password.value === "") {
     return alert('Все поля формы должны быть заполнены!');
   } else {
-    obj[event.target.email.name] = event.target.email.value;
-    obj[event.target.password.name] = event.target.password.value;
+    obj[email.name] = email.value;
+    obj[password.name] = password.value;
     console.log(obj);
     //console.log(`${email.name}: ${email.value}, ${password.name}: ${password.value}`);
     event.currentTarget.reset();
