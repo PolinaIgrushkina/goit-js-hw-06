@@ -7,15 +7,16 @@ const valueLength = Number(input.getAttribute('data-length'));
 function validation(event) {
 
   if (event.currentTarget.value.length === valueLength) {
-    input.classList.remove('invalid');
-    input.classList.add('valid');
-    
+    updateClassEl('valid', 'invalid')
   } else {
-    input.classList.remove('valid');
-    input.classList.add('invalid');
-    
+    updateClassEl('invalid', 'valid')
   }
-
 };
+
+  function updateClassEl(addClass, removeClass) {
+    input.classList.remove(removeClass);
+    input.classList.add(addClass);
+  };
+
 
 
